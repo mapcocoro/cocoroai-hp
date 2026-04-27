@@ -1,0 +1,84 @@
+/* ココロＡＩ合同会社 テーマトークン — エディトリアル雑誌×Bentoハイブリッド */
+:root {
+  /* ベース紙色 */
+  --paper:     #FDFCFB;
+  --paper-2:   #F7F4EE;  /* クリーム気味の章区切り */
+  --cream:     #F2EEE5;
+
+  /* 墨色（文字） */
+  --ink:        #0D2733;
+  --ink-deep:   #061A23;
+  --ink-2:      #1F3440;
+  --ink-soft:   #3C5463;
+  --ink-mute:   #526A76;
+  --ink-line:   #C8CFD3;
+
+  /* ティール深色（唯一のメインアクセント） */
+  --teal:       #005B7B;
+  --teal-deep:  #003F57;
+  --teal-soft:  #D7E4E9;   /* Bentoタイル背景用の淡いティール */
+  --teal-softer:#EAF0F2;
+
+  /* サブアクセント（ワンポイントのみ） */
+  --sun:        #FCCF27;
+  --sun-ink:    #7A5A00;
+
+  /* 旧トークン互換（既存クラスのためのエイリアス） */
+  --cyan-500:   #005B7B;
+  --cyan-600:   #003F57;
+  --text-grad-from: #005B7B;
+  --text-grad-to:   #003F57;
+  --bg-soft-1:  #EAF0F2;
+  --bg-soft-2:  #F2EEE5;
+  --teal-900:   #005B7B;
+  --teal-800:   #1F6C84;
+  --teal-700:   #2E7E95;
+  --teal-400:   #88BFC8;
+  --teal-300:   #9DC8C9;
+  --teal-100:   #DDEEF2;
+  --sun-500:    #FCCF27;
+  --emerald-100:#E6EDE4;
+  --emerald-800:#335544;
+  --ink-900:    #0D2733;
+  --ink-700:    #1F3440;
+  --gray-700:   #3C5463;
+  --gray-600:   #526A76;
+  --gray-500:   #8B9BA5;
+  --gray-400:   #C8CFD3;
+  --gray-200:   #E4E7E9;
+  --gray-100:   #F2F0EC;
+
+  /* シャドウ（紙っぽく薄く） */
+  --shadow-sm:  0 1px 2px rgba(13,39,51,0.04);
+  --shadow:     0 2px 10px rgba(13,39,51,0.06);
+  --shadow-lg:  0 10px 30px rgba(13,39,51,0.08);
+  --shadow-xl:  0 20px 40px rgba(13,39,51,0.10);
+
+  /* サイズ */
+  --max-w:     960px;
+  --max-w-2:   720px;
+}
+
+/* 共通アニメーション */
+@keyframes floaty   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+@keyframes blink    { 0%,92%,100%{transform:scaleY(1)} 95%{transform:scaleY(0.1)} }
+@keyframes marquee  { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes wave-hand{ 0%,100%{transform:rotate(-8deg)} 50%{transform:rotate(18deg)} }
+@keyframes bob      { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-4px) rotate(1deg)} }
+@keyframes fadeUp   { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+
+/* キネティックタイポ用（控えめ版） */
+@keyframes charDrop {
+  0%   { opacity: 0; transform: translateY(22px) rotate(-3deg); }
+  60%  { opacity: 1; transform: translateY(-3px) rotate(1deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(0); }
+}
+@keyframes inkBleed {
+  0%   { opacity: 0; transform: scale(0.6); }
+  60%  { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes subUnder {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
