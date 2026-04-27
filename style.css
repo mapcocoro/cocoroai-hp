@@ -75,7 +75,7 @@ h1, h2 {
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo--image { height: 72px; }
 .logo--image img { height: 100%; width: auto; display: block; }
-@media (min-width: 900px) { .logo--image { height: 110px; } }
+@media (min-width: 900px) { .logo--image { height: 80px; } }
 .nav-pc { display: none; gap: 2px; }
 .nav-pc a {
   font-size: 13px; font-weight: 500; color: var(--ink-soft);
@@ -94,10 +94,19 @@ h1, h2 {
 }
 .btn-header:hover { transform: translateY(-1px); background: var(--teal-deep); box-shadow: var(--shadow-lg); }
 .btn-header--pc { display: none; }
+.header-icons { display: none; gap: 10px; align-items: center; }
+.header-icon { color: var(--ink-mute); transition: color .2s; display: grid; place-items: center; }
+.header-icon:hover { color: var(--teal); }
+.header-icon--line { color: #06C755; }
+.header-icon--line:hover { opacity: 0.8; }
 @media (min-width: 900px) {
   .nav-pc { display: flex; }
   .btn-header--pc { display: inline-block; }
+  .header-icons { display: flex; }
 }
+.nav-drawer__icons { display: flex; gap: 20px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.15); }
+.nav-drawer__icon-link { display: flex; align-items: center; gap: 6px; font-size: 14px; color: rgba(255,255,255,0.8); }
+.nav-drawer__icon-link:hover { color: #fff; }
 
 /* ============ ハンバーガー ============ */
 .nav-toggle {
@@ -138,31 +147,24 @@ h1, h2 {
   letter-spacing: 0.05em;
 }
 
-/* ============ MOBILE: Bento を Hero の上に表示 ============ */
-@media (max-width: 719px) {
-  main#top {
-    display: flex;
-    flex-direction: column;
-  }
-  .bento { order: -1; }
-}
 
 /* ============ HERO（雑誌表紙＋キネティックタイポ） ============ */
 .hero-mag {
   position: relative;
-  padding: 40px 22px 48px;
+  padding: 24px 22px 32px;
   max-width: var(--max-w);
   margin: 0 auto;
 }
-@media (min-width: 720px) { .hero-mag { padding: 60px 32px 72px; } }
-@media (min-width: 900px) { .hero-mag { padding: 72px 32px 88px; } }
+@media (min-width: 720px) { .hero-mag { padding: 32px 32px 40px; } }
+@media (min-width: 900px) { .hero-mag { padding: 16px 32px 20px; } }
 .hero-mag__inner {
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
   padding: 24px 4px 28px;
   position: relative;
 }
-@media (min-width: 720px) { .hero-mag__inner { padding: 36px 8px 40px; } }
+@media (min-width: 720px) { .hero-mag__inner { padding: 20px 8px 24px; } }
+@media (min-width: 900px) { .hero-mag__inner { padding: 12px 8px 14px; } }
 .hero-mag__inner::before,
 .hero-mag__inner::after {
   content: ""; position: absolute;
@@ -180,50 +182,56 @@ h1, h2 {
   letter-spacing: 0.14em;
   color: var(--ink-mute);
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
+@media (min-width: 900px) { .hero-mag__meta { margin-bottom: 14px; } }
 
-/* Hero PC 2-col レイアウト */
-.hero-mag__body { display: block; }
-.hero-mag__visual { display: none; }
+/* Hero レイアウト */
+.hero-mag__headline { display: grid; grid-template-columns: 1fr auto; gap: 4px; align-items: start; }
+.hero-mag__visual { display: flex; flex-direction: column; align-items: center; }
+.hero-mag__robot { width: 100px; height: auto; filter: drop-shadow(4px 8px 16px rgba(13,39,51,0.08)); }
+.hero-mag__stamp { display: none; }
+@media (min-width: 520px) {
+  .hero-mag__headline { gap: 12px; }
+  .hero-mag__robot { width: 140px; }
+}
 @media (min-width: 900px) {
-  .hero-mag__body {
-    display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 48px;
-    align-items: center;
+  .hero-mag__headline {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
   }
   .hero-mag__visual {
-    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    gap: 8px;
     position: relative;
   }
   .hero-mag__robot {
-    width: 340px; height: auto; max-width: 100%;
+    width: 280px;
     animation: bob 6s ease-in-out infinite;
-    filter: drop-shadow(6px 12px 20px rgba(13,39,51,0.08));
   }
+  .hero-mag__stamp { display: block; }
   .hero-mag__stamp {
-    font-size: 10px; letter-spacing: 0.2em;
-    text-align: center; color: var(--ink-mute); line-height: 1.8;
-    padding: 10px 18px;
+    font-size: 9px; letter-spacing: 0.18em;
+    text-align: center; color: var(--ink-mute); line-height: 1.6;
+    padding: 6px 14px;
     border: 1px solid var(--ink-line);
     border-radius: 2px;
     text-transform: uppercase;
   }
 }
 @media (min-width: 1100px) {
-  .hero-mag__robot { width: 400px; }
+  .hero-mag__robot { width: 340px; }
 }
 .hero-mag__dot { color: var(--teal); }
 .hero-mag__tag { color: var(--ink); }
 
 .hero-mag__title {
-  font-size: clamp(30px, 7.5vw, 48px);
+  font-size: clamp(24px, 6vw, 48px);
   line-height: 1.35;
   letter-spacing: 0.02em;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   color: var(--ink);
 }
+@media (min-width: 900px) { .hero-mag__title { margin: 0 0 20px; } }
 .kin-line { display: block; }
 .kin-char {
   display: inline-block;
@@ -250,13 +258,19 @@ h1, h2 {
   font-size: 14px;
   color: var(--ink-soft);
   line-height: 2;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   max-width: 520px;
 }
 @media (min-width: 720px) { .hero-mag__lead { font-size: 15px; } }
+@media (min-width: 900px) { .hero-mag__lead { margin: 0 0 10px; line-height: 1.8; } }
 
-.hero-mag__cta { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
-@media (min-width: 520px) { .hero-mag__cta { flex-direction: row; gap: 12px; } }
+.hero-mag__cta { display: flex; flex-direction: row; gap: 10px; margin-bottom: 12px; align-items: stretch; }
+.hero-mag__cta .btn-primary,
+.hero-mag__cta .btn-secondary { font-size: 12px; padding: 10px 18px; display: flex; align-items: center; justify-content: center; }
+@media (min-width: 520px) {
+  .hero-mag__cta .btn-primary,
+  .hero-mag__cta .btn-secondary { font-size: 13px; padding: 12px 24px; }
+}
 
 .btn-primary {
   background: var(--teal);
@@ -295,7 +309,7 @@ h1, h2 {
   letter-spacing: 0.18em;
   color: var(--ink-mute);
   text-transform: uppercase;
-  margin-top: 14px;
+  margin-top: 8px;
 }
 
 /* ============ BENTO「AT A GLANCE」 ============ */
@@ -307,7 +321,7 @@ h1, h2 {
 .bento__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 88px;
+  grid-auto-rows: 64px;
   gap: 10px;
   grid-template-areas:
     "m m m m"
@@ -316,8 +330,10 @@ h1, h2 {
     "n n r r"
     "b b s s"
     "b b s s"
+    "b b s s"
     "p p p p"
     "p p p p"
+    "t t a a"
     "t t a a"
     "t t a a";
 }
@@ -325,7 +341,7 @@ h1, h2 {
 /* sp ≥ 520px: 4列固定・配置少し変更 */
 @media (min-width: 520px) {
   .bento__grid {
-    grid-auto-rows: 110px;
+    grid-auto-rows: 80px;
     grid-template-areas:
       "m m m m"
       "m m m m"
@@ -333,6 +349,8 @@ h1, h2 {
       "b b r r"
       "b b s s"
       "p p p p"
+      "p p p p"
+      "t t a a"
       "t t a a"
       "t t a a";
   }
@@ -341,7 +359,7 @@ h1, h2 {
 @media (min-width: 860px) {
   .bento__grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 130px;
+    grid-auto-rows: 90px;
     gap: 12px;
     grid-template-areas:
       "m m m p p p"
@@ -454,15 +472,15 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 /* ロボットタイル */
 .bento__tile--robot {
   background: var(--teal-softer);
-  padding: 16px;
+  padding: 12px;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   overflow: hidden;
 }
 .bento__tile--robot img {
-  width: 70%;
-  max-width: 140px;
+  width: 55%;
+  max-width: 110px;
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -502,22 +520,25 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .bento__mini-books img:nth-child(3) { transform: rotate(4deg); }
 
 /* セキュリティ */
-.bento__tile--sec {
+.bento__tile--mail {
   background: var(--paper);
   border: 1px solid var(--ink-line);
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 12px;
+  gap: 8px;
 }
-.bento__tile--sec img {
-  width: 62%;
-  max-width: 96px;
+.bento__mail-icon {
+  width: 56%;
+  max-width: 80px;
   height: auto;
   margin: 0 auto;
-  object-fit: contain;
 }
-.bento__tile--sec .bento__tile-foot {
-  font-size: 10.5px;
+.bento__tile--mail .bento__tile-foot {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal);
   margin-top: 4px;
   letter-spacing: 0.04em;
 }
@@ -551,9 +572,9 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .bento__tile--speed {
   background: var(--teal-soft);
   color: var(--teal-deep);
-  padding: 20px;
+  padding: 14px 18px;
 }
-.bento__tile--speed .bento__tile-head { color: var(--teal-deep); }
+.bento__tile--speed .bento__tile-head { color: var(--teal-deep); font-size: clamp(16px, 3vw, 20px); }
 .bento__tile--ai {
   background: var(--paper);
   border: 1px solid var(--ink);
@@ -782,7 +803,8 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   font-size: 13px;
   transition: transform .25s;
 }
-.service-card[open] .service-card__chev { transform: rotate(45deg); }
+.service-card[open] .service-card__chev { font-size: 0; }
+.service-card[open] .service-card__chev::after { content: "ー"; font-size: 13px; }
 .service-card__body {
   padding: 0 16px 18px;
   font-size: 13.5px;
@@ -1083,14 +1105,14 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   border-radius: 14px;
 }
 .sol-showcase img {
-  width: 220px;
+  width: 160px;
   max-width: 45%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(13,39,51,0.12);
 }
 @media (min-width: 720px) {
-  .sol-showcase img { width: 260px; }
+  .sol-showcase img { width: 200px; }
 }
 
 /* デモボタンカード */
@@ -1519,7 +1541,8 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   display: grid; place-items: center; font-size: 13px;
   transition: transform .25s;
 }
-.pricing-card[open] .pricing-card__chev { transform: rotate(45deg); }
+.pricing-card[open] .pricing-card__chev { font-size: 0; }
+.pricing-card[open] .pricing-card__chev::after { content: "ー"; font-size: 13px; }
 .pricing-card__body { padding: 0 16px 18px; border-top: 1px dashed var(--ink-line); margin: 0 16px; padding-top: 14px; }
 .pricing-card__body ul {
   list-style: none; padding: 0; margin: 0 0 12px;
