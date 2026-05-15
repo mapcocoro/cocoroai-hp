@@ -148,6 +148,57 @@ h1, h2 {
 }
 
 
+/* ============ NEW RELEASE BANNER ============ */
+/* ============ RELEASE TICKER ============ */
+.release-ticker {
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.release-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 24s linear infinite;
+}
+.release-ticker:hover .release-ticker__track {
+  animation-play-state: paused;
+}
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.release-ticker__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 40px;
+  color: var(--paper);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity .2s;
+}
+.release-ticker__item:hover { opacity: 0.7; }
+.release-ticker__badge {
+  background: var(--teal);
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.release-ticker__arrow {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
 /* ============ HERO（雑誌表紙＋キネティックタイポ） ============ */
 .hero-mag {
   position: relative;
@@ -225,7 +276,7 @@ h1, h2 {
 .hero-mag__tag { color: var(--ink); }
 
 .hero-mag__title {
-  font-size: clamp(24px, 6vw, 48px);
+  font-size: clamp(22px, 5.5vw, 48px);
   line-height: 1.35;
   letter-spacing: 0.02em;
   margin: 0 0 10px;
@@ -335,7 +386,9 @@ h1, h2 {
     "p p p p"
     "t t a a"
     "t t a a"
-    "t t a a";
+    "t t a a"
+    "l l l l"
+    "l l l l";
 }
 
 /* sp ≥ 520px: 4列固定・配置少し変更 */
@@ -352,7 +405,9 @@ h1, h2 {
       "p p p p"
       "t t a a"
       "t t a a"
-      "t t a a";
+      "t t a a"
+      "l l l l"
+      "l l l l";
   }
 }
 /* pc ≥ 860px: 6列マグネット配置 */
@@ -366,8 +421,8 @@ h1, h2 {
       "m m m p p p"
       "n n r b b s"
       "n n r b b s"
-      "t t r a a a"
-      "t t r a a a";
+      "t t r a l l"
+      "t t r a l l";
   }
 }
 
@@ -424,6 +479,7 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .bento__tile--wide.bento__tile--sun { grid-area: p; }
 .bento__tile--speed { grid-area: t; }
 .bento__tile--ai    { grid-area: a; }
+.bento__tile--bookshelf { grid-area: l; }
 
 /* 墨色大タイル（キャッチ） */
 .bento__tile--ink {
@@ -432,9 +488,13 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   border-color: var(--ink);
 }
 .site-footer__trademark {
-  font-size: 11px;
-  color: var(--ink-mute);
-  margin-top: 8px;
+  font-size: 9.5px;
+  color: rgba(253,252,251,0.3);
+  margin-top: 6px;
+  text-align: center;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
 }
 .bento__tile--ink .bento__tile-kicker { color: rgba(253,252,251,0.55); }
 .bento__copy {
@@ -494,6 +554,80 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   font-weight: 500;
 }
 
+/* 読書シリーズタイル */
+.bento__tile--bookshelf {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
+  padding: 0;
+  overflow: hidden;
+  background: var(--teal-softer);
+  gap: 0;
+  position: relative;
+}
+.bento__bookshelf-illust {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: inherit;
+}
+.bento__bookshelf-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  width: 55%;
+  background: linear-gradient(to right, rgba(253,252,251,0) 0%, rgba(253,252,251,0.88) 20%, rgba(253,252,251,0.95) 100%);
+}
+.bento__bookshelf-catch {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+@media (min-width: 720px) {
+  .bento__bookshelf-catch { font-size: 13px; }
+}
+.bento__bookshelf-apps {
+  display: flex;
+  gap: 10px;
+}
+.bento__bookshelf-app {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: var(--teal-deep);
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: opacity .2s;
+}
+.bento__bookshelf-app:hover { opacity: 0.6; }
+.bento__bookshelf-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  object-fit: contain;
+  box-shadow: 0 1px 4px rgba(13,39,51,0.10);
+  border: 1px solid var(--ink-line);
+}
+@media (min-width: 720px) {
+  .bento__bookshelf-icon { width: 30px; height: 30px; }
+  .bento__bookshelf-app { font-size: 11px; }
+}
+
 /* Kindleタイル */
 .bento__tile--books { background: var(--paper-2); }
 .bento__mini-books {
@@ -518,6 +652,49 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .bento__mini-books img:nth-child(1) { transform: rotate(-4deg); }
 .bento__mini-books img:nth-child(2) { transform: translateY(-4px); }
 .bento__mini-books img:nth-child(3) { transform: rotate(4deg); }
+
+/* READINGタイル */
+.bento__tile--reading { cursor: default; }
+.bento__reading-items {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 8px 0 4px;
+}
+.bento__reading-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: opacity .2s;
+}
+.bento__reading-link:hover { opacity: 0.7; }
+.bento__reading-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(13,39,51,0.12);
+  border: 1px solid var(--ink-line);
+}
+.bento__tile--reading .bento__mini-books {
+  margin: 6px 0 4px;
+}
+.bento__tile--reading .bento__mini-books img {
+  max-height: 80px;
+}
+@media (min-width: 720px) {
+  .bento__tile--reading .bento__mini-books img { max-height: 110px; }
+  .bento__reading-icon { width: 52px; height: 52px; }
+}
+@media (min-width: 900px) {
+  .bento__tile--reading .bento__mini-books img { max-height: 130px; }
+}
 
 /* セキュリティ */
 .bento__tile--mail {
@@ -578,7 +755,17 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .bento__tile--ai {
   background: var(--paper);
   border: 1px solid var(--ink);
-  padding: 20px;
+  padding: 16px;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.bento__tile--ai .bento__tile-head {
+  font-size: clamp(15px, 3.2vw, 20px);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+@media (min-width: 860px) {
+  .bento__tile--ai .bento__tile-head { font-size: clamp(14px, 1.4vw, 18px); }
 }
 
 /* ============ MARQUEE ============ */
@@ -607,8 +794,9 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .marquee-band__track span:first-child { border-left: none; }
 
 /* ============ section 共通 ============ */
-.section { padding: 48px 22px; }
+.section { padding: 36px 18px; }
 .mag-section { max-width: var(--max-w); margin: 0 auto; }
+@media (min-width: 720px) { .section { padding: 48px 22px; } }
 @media (min-width: 900px) { .section { padding: 72px 32px; } }
 
 .section-head { margin-bottom: 28px; }
@@ -716,7 +904,7 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .whyus-row:first-child { border-top: 1px solid var(--ink); }
 .whyus-row:last-child { border-bottom: 1px solid var(--ink); }
 .whyus-row__num {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--teal);
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -725,10 +913,10 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 }
 .whyus-row__title {
   font-family: "Shippori Mincho B1", serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--ink);
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   line-height: 1.5;
 }
 .whyus-row__body {
@@ -783,11 +971,14 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .service-card__icon--set { background: var(--paper); }
 .service-card__title {
   font-family: "Shippori Mincho B1", serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   margin: 0;
   color: var(--ink);
   line-height: 1.45;
+}
+@media (min-width: 720px) {
+  .service-card__title { font-size: 17px; }
 }
 .service-card__desc {
   font-size: 12px;
@@ -1189,6 +1380,37 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .nav-pc a.is-current { color: var(--teal); font-weight: 700; }
 
 /* ============ WORKS ============ */
+.works-carousel {
+  position: relative;
+}
+.works-carousel::before,
+.works-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+.works-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--paper), transparent);
+}
+.works-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--paper), transparent);
+}
+.works-carousel__track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 16px;
+  padding: 8px 16px 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.works-carousel__track::-webkit-scrollbar { display: none; }
 .works-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1198,6 +1420,8 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   .works-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
 }
 .work-card {
+  position: relative;
+  overflow: visible;
   display: flex; flex-direction: column; gap: 10px;
   padding: 14px;
   background: var(--paper);
@@ -1205,6 +1429,14 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   border-radius: 12px;
   transition: all .2s;
   min-height: 140px;
+}
+.works-carousel__track .work-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  min-height: 160px;
+}
+@media (min-width: 720px) {
+  .works-carousel__track .work-card { flex: 0 0 220px; }
 }
 .work-card:hover {
   transform: translateY(-3px);
@@ -1242,6 +1474,21 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
   color: var(--ink-soft);
   line-height: 1.6;
 }
+.badge-new {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--teal);
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  line-height: 1;
+  z-index: 1;
+}
 
 .works-more { margin-top: 20px; }
 .more-toggle {
@@ -1263,27 +1510,33 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 
 /* ============ ABOUT ============ */
 .about__grid {
-  display: flex; flex-direction: column; gap: 40px;
+  display: flex; flex-direction: column; gap: 24px;
 }
 @media (min-width: 860px) {
   .about__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: start; }
 }
 .about__pull {
   font-family: "Shippori Mincho B1", serif;
-  font-size: clamp(26px, 7vw, 40px);
+  font-size: clamp(19px, 5vw, 40px);
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--ink);
-  margin: 0 0 24px;
-  padding-left: 16px;
+  margin: 0 0 16px;
+  padding-left: 14px;
   border-left: 3px solid var(--teal);
 }
+@media (min-width: 860px) {
+  .about__pull { margin: 0 0 24px; padding-left: 16px; }
+}
 .about__lead {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--ink-soft);
-  line-height: 2;
-  margin: 0 0 14px;
+  line-height: 1.9;
+  margin: 0 0 10px;
+}
+@media (min-width: 720px) {
+  .about__lead { font-size: 14px; line-height: 2; margin: 0 0 14px; }
 }
 
 .about__books {
@@ -1584,8 +1837,8 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 /* ============ CTA ============ */
 .cta-final {
   max-width: var(--max-w);
-  margin: 24px auto 0;
-  padding: 56px 22px 72px;
+  margin: 0 auto;
+  padding: 24px 18px 56px;
   text-align: center;
   position: relative;
 }
@@ -1616,52 +1869,77 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .site-footer {
   background: var(--ink);
   color: rgba(253,252,251,0.8);
-  padding: 48px 22px 24px;
+  padding: 32px 18px 20px;
   margin-top: 40px;
 }
 .site-footer__inner {
   max-width: var(--max-w);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  padding-bottom: 32px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid rgba(253,252,251,0.12);
 }
+.site-footer__inner > div:first-child {
+  grid-column: 1 / -1;
+}
 @media (min-width: 720px) {
-  .site-footer__inner { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+  .site-footer { padding: 48px 22px 24px; }
+  .site-footer__inner { grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+  .site-footer__inner > div:first-child { grid-column: auto; }
 }
 .site-footer__brand {
   font-family: "Shippori Mincho B1", serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--paper);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   letter-spacing: 0.04em;
 }
 .site-footer__meta {
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 11.5px;
+  line-height: 1.8;
   color: rgba(253,252,251,0.65);
 }
+.site-footer__security {
+  font-size: 10px;
+  color: rgba(253,252,251,0.5);
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+.site-footer__sns {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.site-footer__sns a {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: rgba(253,252,251,0.55);
+  text-decoration: none;
+  transition: color .15s;
+}
+.site-footer__sns a:hover { color: var(--sun); }
 .site-footer h4 {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.2em;
   color: var(--paper);
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
-.site-footer li { margin-bottom: 8px; font-size: 12.5px; }
+.site-footer li { margin-bottom: 6px; font-size: 12px; }
 .site-footer li a { color: rgba(253,252,251,0.7); transition: color .15s; }
 .site-footer li a:hover { color: var(--sun); }
 .site-footer__copy {
   max-width: var(--max-w);
-  margin: 20px auto 0;
+  margin: 16px auto 0;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 10.5px;
+  font-size: 10px;
   letter-spacing: 0.1em;
-  color: rgba(253,252,251,0.45);
+  color: rgba(253,252,251,0.4);
   text-align: center;
 }
 
