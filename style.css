@@ -556,76 +556,62 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 
 /* 読書シリーズタイル */
 .bento__tile--bookshelf {
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-end;
-  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
   overflow: hidden;
   background: var(--teal-softer);
-  gap: 0;
+  gap: 8px;
   position: relative;
 }
-.bento__bookshelf-illust {
+.bento__tile--bookshelf .bento__tile-kicker {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left center;
-  border-radius: inherit;
-}
-.bento__bookshelf-overlay {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 14px 16px;
-  width: 55%;
-  background: linear-gradient(to right, rgba(253,252,251,0) 0%, rgba(253,252,251,0.88) 20%, rgba(253,252,251,0.95) 100%);
+  top: 12px;
+  left: 14px;
 }
 .bento__bookshelf-catch {
   font-family: "Shippori Mincho B1", serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.6;
   color: var(--ink);
   margin: 0;
   letter-spacing: 0.04em;
+  text-align: center;
 }
 @media (min-width: 720px) {
-  .bento__bookshelf-catch { font-size: 13px; }
+  .bento__bookshelf-catch { font-size: 14px; }
 }
 .bento__bookshelf-apps {
   display: flex;
-  gap: 10px;
+  gap: 14px;
+  justify-content: center;
 }
 .bento__bookshelf-app {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   text-decoration: none;
   color: var(--teal-deep);
   font-family: "Shippori Mincho B1", serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
   transition: opacity .2s;
 }
 .bento__bookshelf-app:hover { opacity: 0.6; }
 .bento__bookshelf-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
   object-fit: contain;
   box-shadow: 0 1px 4px rgba(13,39,51,0.10);
   border: 1px solid var(--ink-line);
 }
 @media (min-width: 720px) {
-  .bento__bookshelf-icon { width: 30px; height: 30px; }
-  .bento__bookshelf-app { font-size: 11px; }
+  .bento__bookshelf-icon { width: 34px; height: 34px; }
+  .bento__bookshelf-app { font-size: 12px; }
 }
 
 /* Kindleタイル */
@@ -1507,6 +1493,78 @@ a.bento__tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg);
 .more-toggle::-webkit-details-marker { display: none; }
 .more-toggle:hover { background: var(--ink); color: var(--paper); }
 .works-more[open] .more-toggle::after { content: " (閉じる)"; opacity: 0.6; }
+
+/* Dual-link cards (Web/iOS) */
+.work-card--dual { cursor: default; }
+.work-card__links {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+.work-card__links a,
+.work-card__links span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all .2s;
+  line-height: 1;
+  white-space: nowrap;
+}
+.work-card__link--web {
+  color: var(--teal);
+  background: rgba(0, 91, 123, 0.07);
+  border: 1.5px solid rgba(0, 91, 123, 0.25);
+}
+.work-card__link--web svg {
+  width: 13px; height: 13px; flex-shrink: 0;
+}
+.work-card__link--web:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+.work-card__link--web:hover svg { fill: #fff; }
+.work-card__link--ios {
+  color: #fff;
+  background: var(--teal);
+  border: 1.5px solid var(--teal);
+}
+.work-card__link--ios svg {
+  width: 12px; height: 14px; flex-shrink: 0; fill: #fff;
+}
+.work-card__link--ios:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+/* Show-all mode: hide carousel, show unified grid */
+section.works:has(.works-more[open]) .works-carousel {
+  display: none;
+}
+
+/* Bookshelf app sub link (iOS badge) */
+.bento__bookshelf-app--sub {
+  gap: 0;
+}
+.bento__bl--ios-mini {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--teal);
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
 
 /* ============ ABOUT ============ */
 .about__grid {

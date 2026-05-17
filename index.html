@@ -81,7 +81,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Quicksand:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="tokens.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20260517" />
 </head>
 <body>
 
@@ -194,9 +194,9 @@
     <!-- ============ NEW RELEASE TICKER ============ -->
     <div class="release-ticker" aria-label="新着情報">
       <div class="release-ticker__track">
-        <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="release-ticker__item">
+        <a href="https://apps.apple.com/us/app/%E6%98%9F%E6%9E%95/id6769673924" target="_blank" rel="noopener" class="release-ticker__item">
           <span class="release-ticker__badge">NEW</span>
-          <span>没入型童話リーダー「星枕」を公開</span>
+          <span>「星枕」iOSアプリをリリース</span>
           <span class="release-ticker__arrow">→</span>
         </a>
         <a href="https://shiolibi.super-night-76d8.workers.dev/guide" target="_blank" rel="noopener" class="release-ticker__item">
@@ -208,9 +208,9 @@
           <span>化粧品成分辞典「hadapedia」215成分収録</span>
           <span class="release-ticker__arrow">→</span>
         </a>
-        <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="release-ticker__item" aria-hidden="true">
+        <a href="https://apps.apple.com/us/app/%E6%98%9F%E6%9E%95/id6769673924" target="_blank" rel="noopener" class="release-ticker__item" aria-hidden="true">
           <span class="release-ticker__badge">NEW</span>
-          <span>没入型童話リーダー「星枕」を公開</span>
+          <span>「星枕」iOSアプリをリリース</span>
           <span class="release-ticker__arrow">→</span>
         </a>
         <a href="https://shiolibi.super-night-76d8.workers.dev/guide" target="_blank" rel="noopener" class="release-ticker__item" aria-hidden="true">
@@ -294,19 +294,18 @@
 
         <!-- 9. 読書シリーズ -->
         <div class="bento__tile bento__tile--bookshelf">
-          <img src="images/cocorobo_reading2.png" alt="本を読むここロボちゃん" class="bento__bookshelf-illust" />
-          <div class="bento__bookshelf-overlay">
-            <p class="bento__bookshelf-catch">物語と読書を、<br />もっと深く。</p>
-            <div class="bento__bookshelf-apps">
-              <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="bento__bookshelf-app">
-                <img src="images/hoshimakura_icon.png" alt="" class="bento__bookshelf-icon" />
-                <span>星枕</span>
-              </a>
-              <a href="https://shiolibi.super-night-76d8.workers.dev/guide" target="_blank" rel="noopener" class="bento__bookshelf-app">
-                <img src="images/shiolibi_icon.png" alt="" class="bento__bookshelf-icon" />
-                <span>栞灯</span>
-              </a>
-            </div>
+          <div class="bento__tile-kicker mono">READING</div>
+          <p class="bento__bookshelf-catch">物語と読書を、<br />もっと深く。</p>
+          <div class="bento__bookshelf-apps">
+            <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="bento__bookshelf-app">
+              <img src="images/hoshimakura_icon.png" alt="" class="bento__bookshelf-icon" />
+              <span>星枕</span>
+              <span class="bento__bl--ios-mini">iOS</span>
+            </a>
+            <a href="https://shiolibi.super-night-76d8.workers.dev/guide" target="_blank" rel="noopener" class="bento__bookshelf-app">
+              <img src="images/shiolibi_icon.png" alt="" class="bento__bookshelf-icon" />
+              <span>栞灯</span>
+            </a>
           </div>
         </div>
       </div>
@@ -541,15 +540,19 @@
 
       <div class="works-carousel">
         <div class="works-carousel__track">
-          <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card work-card--dual">
             <span class="badge-new">NEW</span>
             <div class="work-card__icon"><img src="images/hoshimakura_icon.png" alt="" /></div>
             <div>
-              <span class="work-card__tag">Web・読書</span>
+              <span class="work-card__tag">Web/iOS・読書</span>
               <div class="work-card__name">星枕（ほしまくら）</div>
               <div class="work-card__desc">眠る前の大人のための没入型童話リーダー</div>
             </div>
-          </a>
+            <div class="work-card__links">
+              <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card__link--web"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</a>
+              <a href="https://apps.apple.com/us/app/%E6%98%9F%E6%9E%95/id6769673924" target="_blank" rel="noopener" class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</a>
+            </div>
+          </div>
           <a href="https://shiolibi.super-night-76d8.workers.dev/guide" target="_blank" rel="noopener" class="work-card">
             <span class="badge-new">NEW</span>
             <div class="work-card__icon"><img src="images/shiolibi_icon.png" alt="" /></div>
@@ -558,6 +561,7 @@
               <div class="work-card__name">栞灯（しおりび）</div>
               <div class="work-card__desc">本との関係すべてを肯定する読書ノート</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
           <a href="https://apps.apple.com/jp/app/post-pal/id6749898580" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/post_pal_icon.png" alt="" /></div>
@@ -566,6 +570,7 @@
               <div class="work-card__name">Post Pal</div>
               <div class="work-card__desc">SNS投稿をAIで自動作成</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
           <a href="https://hadapedia.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/hadapedia_icon.png" alt="" /></div>
@@ -574,6 +579,7 @@
               <div class="work-card__name">hadapedia</div>
               <div class="work-card__desc">化粧品成分辞典・215成分収録</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
           <a href="https://inz-ryu.jp/" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/ryu-no-kiseki_icon.png" alt="" /></div>
@@ -582,6 +588,7 @@
               <div class="work-card__name">龍の奇跡</div>
               <div class="work-card__desc">日本酒プロモーションLP</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
           <a href="https://apps.apple.com/us/app/id6755469573" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/itpassport_icon.png" alt="" /></div>
@@ -590,15 +597,20 @@
               <div class="work-card__name">ITパスポート</div>
               <div class="work-card__desc">スキマ時間で試験対策</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
-          <a href="https://bento.cocoroai.co.jp" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card work-card--dual">
             <div class="work-card__icon"><img src="images/bento_planner_icon.png" alt="" /></div>
             <div>
               <span class="work-card__tag">Web/iOS・暮らし</span>
               <div class="work-card__name">Bento Planner</div>
               <div class="work-card__desc">AIで献立作成</div>
             </div>
-          </a>
+            <div class="work-card__links">
+              <a href="https://bento.cocoroai.co.jp" target="_blank" rel="noopener" class="work-card__link--web"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</a>
+              <a href="https://apps.apple.com/us/app/bento-planner/id6748500612" target="_blank" rel="noopener" class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</a>
+            </div>
+          </div>
           <a href="https://meishi.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/meishi_icon.png" alt="" /></div>
             <div>
@@ -606,6 +618,7 @@
               <div class="work-card__name">おてもと名刺帳</div>
               <div class="work-card__desc">名刺をAI-OCRで管理</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
           <a href="https://chouhyo.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/chouhyo_icon.png" alt="" /></div>
@@ -614,6 +627,7 @@
               <div class="work-card__name">かんたん帳票</div>
               <div class="work-card__desc">請求書・見積書をAIで作成</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
           <a href="https://apps.apple.com/us/app/id6759184650" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/takken_icon.png" alt="" /></div>
@@ -622,48 +636,164 @@
               <div class="work-card__name">どこでもTAKKEN</div>
               <div class="work-card__desc">宅建試験対策アプリ</div>
             </div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
         </div>
       </div>
 
       <details class="works-more">
-        <summary class="more-toggle">その他のプロダクトを見る</summary>
+        <summary class="more-toggle">すべてのプロダクトを見る</summary>
         <div class="works-grid" style="margin-top:16px;">
+          <!-- Featured products (carousel duplicates) -->
+          <div class="work-card work-card--dual">
+            <span class="badge-new">NEW</span>
+            <div class="work-card__icon"><img src="images/hoshimakura_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web/iOS・読書</span>
+              <div class="work-card__name">星枕（ほしまくら）</div>
+              <div class="work-card__desc">眠る前の大人のための没入型童話リーダー</div>
+            </div>
+            <div class="work-card__links">
+              <a href="https://hoshimakura.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card__link--web"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</a>
+              <a href="https://apps.apple.com/us/app/%E6%98%9F%E6%9E%95/id6769673924" target="_blank" rel="noopener" class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</a>
+            </div>
+          </div>
+          <a href="https://shiolibi.super-night-76d8.workers.dev/guide" target="_blank" rel="noopener" class="work-card">
+            <span class="badge-new">NEW</span>
+            <div class="work-card__icon"><img src="images/shiolibi_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web・読書</span>
+              <div class="work-card__name">栞灯（しおりび）</div>
+              <div class="work-card__desc">本との関係すべてを肯定する読書ノート</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
+          </a>
+          <a href="https://apps.apple.com/jp/app/post-pal/id6749898580" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/post_pal_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">iOS・業務効率化</span>
+              <div class="work-card__name">Post Pal</div>
+              <div class="work-card__desc">SNS投稿をAIで自動作成</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
+          </a>
+          <a href="https://hadapedia.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/hadapedia_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web・美容</span>
+              <div class="work-card__name">hadapedia</div>
+              <div class="work-card__desc">化粧品成分辞典・215成分収録</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
+          </a>
+          <a href="https://inz-ryu.jp/" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/ryu-no-kiseki_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web・LP</span>
+              <div class="work-card__name">龍の奇跡</div>
+              <div class="work-card__desc">日本酒プロモーションLP</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
+          </a>
+          <a href="https://apps.apple.com/us/app/id6755469573" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/itpassport_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">iOS・学習</span>
+              <div class="work-card__name">ITパスポート</div>
+              <div class="work-card__desc">スキマ時間で試験対策</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
+          </a>
+          <div class="work-card work-card--dual">
+            <div class="work-card__icon"><img src="images/bento_planner_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web/iOS・暮らし</span>
+              <div class="work-card__name">Bento Planner</div>
+              <div class="work-card__desc">AIで献立作成</div>
+            </div>
+            <div class="work-card__links">
+              <a href="https://bento.cocoroai.co.jp" target="_blank" rel="noopener" class="work-card__link--web"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</a>
+              <a href="https://apps.apple.com/us/app/bento-planner/id6748500612" target="_blank" rel="noopener" class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</a>
+            </div>
+          </div>
+          <a href="https://meishi.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/meishi_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web・業務</span>
+              <div class="work-card__name">おてもと名刺帳</div>
+              <div class="work-card__desc">名刺をAI-OCRで管理</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
+          </a>
+          <a href="https://chouhyo.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/chouhyo_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">Web・業務</span>
+              <div class="work-card__name">かんたん帳票</div>
+              <div class="work-card__desc">請求書・見積書をAIで作成</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
+          </a>
+          <a href="https://apps.apple.com/us/app/id6759184650" target="_blank" rel="noopener" class="work-card">
+            <div class="work-card__icon"><img src="images/takken_icon.png" alt="" /></div>
+            <div>
+              <span class="work-card__tag">iOS・学習</span>
+              <div class="work-card__name">どこでもTAKKEN</div>
+              <div class="work-card__desc">宅建試験対策アプリ</div>
+            </div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
+          </a>
+          <!-- Other products -->
           <a href="https://apps.apple.com/us/app/id6754008783" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/fp1-pocket.png" alt="" /></div>
-            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">FP1級 Pocket</div></div>
+            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">FP1級 Pocket</div><div class="work-card__desc">FP1級の過去問をスキマ時間で</div></div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
           <a href="https://apps.apple.com/us/app/id6753967720" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/fp2_pocket_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">FP2級 Pocket</div></div>
+            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">FP2級 Pocket</div><div class="work-card__desc">FP2級の過去問をスキマ時間で</div></div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
           <a href="https://apps.apple.com/app/fp3-pocket/id6753855233" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/fp3_pocket_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">FP3級 Pocket</div></div>
+            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">FP3級 Pocket</div><div class="work-card__desc">FP3級の過去問をスキマ時間で</div></div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
           <a href="https://apps.apple.com/us/app/id6752938393" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/icon-document.png" alt="" /></div>
-            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">サクッと復習！中学生</div></div>
+            <div><span class="work-card__tag">iOS・学習</span><div class="work-card__name">サクッと復習！中学生</div><div class="work-card__desc">主要5教科をサクッとおさらい</div></div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
-          <a href="https://rice.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
+          <div class="work-card work-card--dual">
             <div class="work-card__icon"><img src="images/rice_sommelier_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">Web/iOS・暮らし</span><div class="work-card__name">お米ソムリエ</div></div>
-          </a>
-          <a href="https://bihadaconcierge.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
+            <div><span class="work-card__tag">Web/iOS・暮らし</span><div class="work-card__name">お米ソムリエ</div><div class="work-card__desc">好みに合ったお米をAIが提案</div></div>
+            <div class="work-card__links">
+              <a href="https://rice.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card__link--web"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</a>
+              <a href="https://apps.apple.com/us/app/%E6%97%A5%E6%9C%AC%E3%81%AE%E7%BE%8E%E5%91%B3%E3%81%97%E3%81%84-%E3%81%8A%E7%B1%B3%E3%82%BD%E3%83%A0%E3%83%AA%E3%82%A8/id6749472378" target="_blank" rel="noopener" class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</a>
+            </div>
+          </div>
+          <div class="work-card work-card--dual">
             <div class="work-card__icon"><img src="images/bihada_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">Web・美容</span><div class="work-card__name">美肌コンシェルジュ</div></div>
-          </a>
+            <div><span class="work-card__tag">Web/iOS・美容</span><div class="work-card__name">美肌コンシェルジュ</div><div class="work-card__desc">肌悩みに合ったスキンケアをAIが提案</div></div>
+            <div class="work-card__links">
+              <a href="https://bihadaconcierge.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</a>
+              <a href="https://apps.apple.com/us/app/%E7%BE%8E%E8%82%8C%E3%82%B3%E3%83%B3%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B8%E3%83%A5/id6749561640" target="_blank" rel="noopener" class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</a>
+            </div>
+          </div>
           <a href="https://apps.apple.com/us/app/%E7%99%92%E3%81%97%E3%81%AE%E3%82%AF%E3%83%A2%E3%81%AE%E3%81%A1%E3%82%83%E3%82%93/id6746834418" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/kumochan_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">iOS・癒し</span><div class="work-card__name">癒しのクモちゃん</div></div>
+            <div><span class="work-card__tag">iOS・癒し</span><div class="work-card__name">癒しのクモちゃん</div><div class="work-card__desc">繊細な蜘蛛の巣アートで癒される</div></div>
+            <span class="work-card__links"><span class="work-card__link--ios"><svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-27.1-46.9-42.2-83.7-45.4-35.1-3.1-73.3 20.7-87.4 20.7-14.8 0-49.1-19.6-74.4-19.6C63.1 140.2 0 185.3 0 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.8 59 126.9 107.2 125.4 25.1-.6 42.8-18 75.5-18 31.8 0 48.3 18 76.7 18 48.6-.7 90.8-82.5 102.8-119.3-65.2-30.7-61.7-90-61.9-92.1zm-56.4-164.2c27.3-32.4 24.8-62.1 24-72.5-24 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>App Store</span></span>
           </a>
           <a href="https://iyashinurse.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/nursechan_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">Web・癒し</span><div class="work-card__name">癒しの白衣ちゃん</div></div>
+            <div><span class="work-card__tag">Web・癒し</span><div class="work-card__name">癒しの白衣ちゃん</div><div class="work-card__desc">優しい看護師がそっと寄り添う</div></div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
           <a href="https://iyashiteacher.cocoroai.co.jp/" target="_blank" rel="noopener" class="work-card">
             <div class="work-card__icon"><img src="images/chalk_icon.png" alt="" /></div>
-            <div><span class="work-card__tag">Web・癒し</span><div class="work-card__name">癒しのチョーク</div></div>
+            <div><span class="work-card__tag">Web・癒し</span><div class="work-card__name">癒しのチョーク</div><div class="work-card__desc">黒板アートの温もりでほっと一息</div></div>
+            <span class="work-card__links"><span class="work-card__link--web"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg>Web版</span></span>
           </a>
         </div>
       </details>
@@ -726,6 +856,20 @@
 
       <div class="news-panel">
         <ul class="news-list" id="newsList">
+          <li class="news-item">
+            <details class="news-item__details">
+              <summary class="news-item__summary">
+                <div class="news-item__meta">
+                  <time class="news-item__date mono" datetime="2026-05-17">2026.05.17</time>
+                  <span class="news-item__tag" data-tag="アプリ">アプリ</span>
+                </div>
+                <p class="news-item__text">「星枕（ほしまくら）」iOSアプリをリリース</p>
+              </summary>
+              <div class="news-item__body">
+                <p>没入型童話リーダー「星枕」がiOSアプリになりました。オフラインでも楽しめます。 <a href="https://apps.apple.com/us/app/%E6%98%9F%E6%9E%95/id6769673924" target="_blank" rel="noopener" class="news-item__link">>></a></p>
+              </div>
+            </details>
+          </li>
           <li class="news-item">
             <details class="news-item__details">
               <summary class="news-item__summary">
