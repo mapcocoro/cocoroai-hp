@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Mono:wght@400;500&family=Shippori+Mincho+B1:wght@600;800&family=Yomogi&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260702b">
+<link rel="stylesheet" href="style.css?v=20260702c">
 </head>
 <body>
 
@@ -97,6 +97,7 @@
 
 <!-- ============ タブ ============ -->
 <div class="sol-tabs" role="tablist" aria-label="お悩みカテゴリ">
+  <button class="zk-chip" role="tab" aria-selected="false" data-tab="all">✨ すべて</button>
   <button class="zk-chip is-active" role="tab" aria-selected="true" data-tab="reserve">📞 予約対応</button>
   <button class="zk-chip" role="tab" aria-selected="false" data-tab="repeat">💌 リピーター</button>
   <button class="zk-chip" role="tab" aria-selected="false" data-tab="hp">💻 HP制作</button>
@@ -181,10 +182,10 @@
     <p class="sol-desc">見積・帳票・名簿・順番待ち。市販ツールが大きすぎる・高すぎると感じたら、御社の仕事に合わせた道具をオーダーメイドで作ります。まずは無料で使える道具からお試しください。</p>
     <h2 class="svc-panel__sub">さわれるサンプル</h2>
     <div class="demo-grid">
+      <a class="demo-btn" href="https://cocoroai-tools.pages.dev" target="_blank" rel="noopener"><img src="images/icon-co-kodogu.png" alt="" loading="lazy"><span><strong>しごとの小道具</strong><small>無料ツール7本</small></span></a>
       <a class="demo-btn" href="https://chouhyo.cocoroai.co.jp/" target="_blank" rel="noopener"><img src="images/chouhyo_icon.png" alt="" loading="lazy"><span><strong>かんたん帳票</strong><small>請求書・見積書・納品書</small></span></a>
       <a class="demo-btn" href="https://mapcocoro.github.io/genbacho-0d2a02/" target="_blank" rel="noopener"><img src="images/icon-genbacho.png" alt="" loading="lazy"><span><strong>現場帳</strong><small>建設業向け見積デモ</small></span></a>
       <a class="demo-btn" href="https://meishi.cocoroai.co.jp/" target="_blank" rel="noopener"><img src="images/meishi_icon.png" alt="" loading="lazy"><span><strong>おてもと名刺帳</strong><small>AI-OCR名刺管理</small></span></a>
-      <a class="demo-btn" href="https://cocoroai-tools.pages.dev" target="_blank" rel="noopener"><img src="images/icon-co-kodogu.png" alt="" loading="lazy"><span><strong>しごとの小道具</strong><small>無料ツール7本</small></span></a>
     </div>
     <p class="svc-panel__note">建設業・工事業・リフォーム業・出張サービス業などにおすすめです。</p>
   </div>
@@ -257,6 +258,13 @@
       panels.forEach(function (p) { p.classList.remove("is-active"); });
       tab.classList.add("is-active");
       tab.setAttribute("aria-selected", "true");
+      if (tab.dataset.tab === "all") {
+        panels.forEach(function (p) {
+          p.classList.add("is-active");
+          if (window.__typeIn) window.__typeIn(p);
+        });
+        return;
+      }
       var panel = document.querySelector('.sol-panel[data-panel="' + tab.dataset.tab + '"]');
       if (panel) {
         panel.classList.add("is-active");
