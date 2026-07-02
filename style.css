@@ -1535,6 +1535,24 @@ li:hover .news-arrow { opacity: 1; transform: none; }
 }
 
 /* ============================================================
+   吹き出しの改行制御
+   スペース・句読点の位置でだけ折り返す（1文字だけの孤立改行を防ぐ）
+   ============================================================ */
+.bubble, .robo-say__bubble, .cta__bubble,
+.chat__user, .chat__robo p, .zk-detail__say p,
+.cta__title, .cta__lead {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .robo-say__bubble { font-size: 13.5px; padding: 9px 16px; }
+  .chat__robo p { font-size: 13.5px; }
+  .hero .bubble { font-size: 13px; }
+  .cta__bubble { font-size: 13px; }
+  .zk-detail__say p { font-size: 12.5px; }
+}
+
+/* ============================================================
    マイクロインタラクション
    ============================================================ */
 
