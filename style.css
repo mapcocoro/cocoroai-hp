@@ -175,17 +175,22 @@ a { color: inherit; text-decoration: none; }
 .drawer {
   position: fixed; inset: 0; z-index: 99;
   background: var(--teal-deep);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  overflow-y: auto;
   opacity: 0; pointer-events: none; transition: opacity .35s;
 }
 .drawer.open { opacity: 1; pointer-events: auto; }
-.drawer nav { display: flex; flex-direction: column; gap: 18px; }
+.drawer nav { display: flex; flex-direction: column; gap: 18px; margin: auto; padding: 76px 24px 44px; }
 .drawer a {
   font-family: var(--disp); font-size: 26px; color: #fff;
   display: flex; align-items: baseline; gap: 14px;
 }
 .drawer a i { font-family: var(--mono); font-style: normal; font-size: 12px; color: var(--aqua); }
 .drawer__cta { color: var(--sun) !important; font-size: 18px !important; margin-top: 16px; }
+@media (max-height: 720px) {
+  .drawer nav { gap: 12px; }
+  .drawer a { font-size: 21px; }
+}
 
 /* ---------- HERO ---------- */
 .hero {
@@ -558,6 +563,11 @@ a { color: inherit; text-decoration: none; }
   font-weight: 400;
   font-size: clamp(24px, 4vw, 36px);
   letter-spacing: .03em;
+}
+@media (max-width: 480px) {
+  .svc-panel__head { gap: 14px; }
+  .svc-panel__icon { width: 54px; }
+  .svc-panel__title { font-size: 21px; }
 }
 .chat { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
 .chat__user {
@@ -1492,6 +1502,37 @@ li:hover .news-arrow { opacity: 1; transform: none; }
 .flow-notes { list-style: none; border-top: 1px solid var(--hairline); padding-top: 18px; }
 .flow-notes li { font-size: 12.5px; color: var(--ink-mute); padding: 4px 0 4px 1.2em; position: relative; }
 .flow-notes li::before { content: "・"; position: absolute; left: 0; color: var(--aqua); }
+
+/* ============================================================
+   お悩み別ページ
+   ============================================================ */
+.sol-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 var(--pad);
+  margin: 0 auto clamp(34px, 5vw, 50px);
+  max-width: var(--max-w);
+}
+.sol-wrap {
+  max-width: calc(760px + var(--pad) * 2);
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(56px, 8vw, 90px);
+}
+.sol-panel { display: none; }
+.sol-panel.is-active { display: block; animation: solIn .55s cubic-bezier(.22,1,.36,1); }
+@keyframes solIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+.sol-panel .chat { margin-bottom: 26px; }
+.sol-desc { color: var(--ink-soft); margin-bottom: 32px; }
+.sol-panel .svc-panel__sub { margin-top: 6px; }
+.svc-panel__shots--2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 460px;
+}
 
 /* ============================================================
    マイクロインタラクション
