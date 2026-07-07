@@ -373,7 +373,7 @@
 
   var moveCount = 0;
 
-  /* ---------- ここロボちゃんがインクを「ふーっ」と吹く ---------- */
+  /* ---------- ココロボちゃんがインクを「ふーっ」と吹く ---------- */
   var roboImg = document.querySelector(".hero__robo img");
   if (roboImg && !REDUCED) {
     setInterval(function () {

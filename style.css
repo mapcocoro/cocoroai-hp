@@ -312,7 +312,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--cream-2);
 }
 
-/* ここロボちゃんの案内吹き出し（Morselのエージェント風） */
+/* ココロボちゃんの案内吹き出し（Morselのエージェント風） */
 .robo-say {
   display: flex;
   align-items: flex-end;
