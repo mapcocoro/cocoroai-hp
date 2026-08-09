@@ -1205,43 +1205,25 @@ a { color: inherit; text-decoration: none; }
   padding: 14px 8px;
   border-radius: 18px;
 }
-/* NEWバッジ（ギザギザのシールっぽく） */
+/* NEWバッジ（アイコン右上に少し重なる横長ピル） */
 .zk-sat__new {
-  --burst: polygon(50.0% 0.0%, 60.1% 12.3%, 75.0% 6.7%, 77.6% 22.4%, 93.3% 25.0%, 87.7% 39.9%,
-    100.0% 50.0%, 87.7% 60.1%, 93.3% 75.0%, 77.6% 77.6%, 75.0% 93.3%, 60.1% 87.7%,
-    50.0% 100.0%, 39.9% 87.7%, 25.0% 93.3%, 22.4% 77.6%, 6.7% 75.0%, 12.3% 60.1%,
-    0.0% 50.0%, 12.3% 39.9%, 6.7% 25.0%, 22.4% 22.4%, 25.0% 6.7%, 39.9% 12.3%);
   position: absolute;
   z-index: 2;
-  top: -2px; right: 2px;
-  width: 40px; height: 40px;
-  display: grid; place-items: center;
+  top: 6px;
+  left: 50%;
+  margin-left: 12px;          /* アイコン中心から右へ＝右上に少し重なる */
   font-family: var(--mono);
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: .04em;
+  letter-spacing: .06em;
+  line-height: 1;
   color: var(--sun-ink);
-  transform: rotate(-10deg);
-  filter: drop-shadow(0 4px 8px rgba(13,39,51,.18));
+  background: var(--sun);
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  padding: 3px 8px 4px;
+  box-shadow: 0 3px 8px rgba(13,39,51,.2);
   pointer-events: none;
-  animation: zkNewPop 2.6s ease-in-out infinite;
-}
-.zk-sat__new::before,
-.zk-sat__new::after {
-  content: "";
-  position: absolute;
-  clip-path: var(--burst);
-}
-.zk-sat__new::before { inset: 0; background: #fff; }                       /* 白フチ */
-.zk-sat__new::after  { inset: 3px; background: linear-gradient(150deg, #FFE07A, var(--sun)); }
-.zk-sat__new span { position: relative; z-index: 1; }
-.zk-sat__new .zk-sat__new-star { display: block; font-size: 8px; line-height: 1; margin-bottom: 1px; }
-@keyframes zkNewPop {
-  0%, 100% { transform: rotate(-10deg) scale(1); }
-  50%      { transform: rotate(-10deg) scale(1.09); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .zk-sat__new { animation: none; }
 }
 .zk-sat img {
   width: clamp(52px, 6.5vw, 64px);
