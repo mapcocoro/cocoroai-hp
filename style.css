@@ -1200,9 +1200,24 @@ a { color: inherit; text-decoration: none; }
 }
 .zk-sats--3 { grid-template-columns: repeat(3, 1fr); }
 .zk-sat {
+  position: relative;
   text-align: center;
   padding: 14px 8px;
   border-radius: 18px;
+}
+.zk-sat__new {
+  position: absolute;
+  top: 4px; right: 8px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  background: var(--sun);
+  color: var(--sun-ink);
+  border-radius: 999px;
+  padding: 2px 8px;
+  box-shadow: 0 4px 10px rgba(13,39,51,.15);
+  pointer-events: none;
 }
 .zk-sat img {
   width: clamp(52px, 6.5vw, 64px);

@@ -66,7 +66,7 @@
     };
     var say = detail.querySelector(".zk-detail__say p");
     if (say) {
-      say.textContent = SAY[card.dataset.cat] || SAY.work;
+      say.textContent = SAY[(card.dataset.cat || "").split(" ")[0]] || SAY.work;
       delete say.dataset.typed;
       delete say.dataset.played;
     }
@@ -131,7 +131,8 @@
         var key = chip.dataset.filter;
         var apply = function () {
           tiles.forEach(function (t) {
-            t.hidden = key !== "all" && t.dataset.cat !== key;
+            // data-catはスペース区切りで複数カテゴリ可（例: "read learn"）
+            t.hidden = key !== "all" && (t.dataset.cat || "").split(" ").indexOf(key) === -1;
           });
         };
         if (document.startViewTransition &&
