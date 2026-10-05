@@ -653,6 +653,45 @@ a { color: inherit; text-decoration: none; }
   animation-timing-function: cubic-bezier(.22,1,.36,1);
 }
 
+
+/* 業務ツールの紹介：既存のサービス詳細とお悩み別で共通 */
+.work-copy { margin-bottom: 30px; color: var(--ink-soft); }
+.work-copy__title { font-family: var(--serif); font-size: clamp(22px, 2.8vw, 29px); line-height: 1.6; letter-spacing: .03em; color: var(--ink); margin-bottom: 20px; }
+.work-copy p + p { margin-top: 12px; }
+.work-overview { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: start; margin: 34px 0; }
+.work-benefits ul { list-style: none; }
+.work-benefits li { padding: 13px 0; border-bottom: 1px solid var(--hairline); }
+.work-benefits li:first-child { padding-top: 0; }
+.work-benefits strong { font-size: 15px; color: var(--teal); }
+.work-benefits p { font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+.work-example { min-width: 0; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: var(--shadow-soft); padding: 20px; }
+.work-example figcaption { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 12px; color: var(--ink-mute); margin-bottom: 16px; }
+.work-example figcaption span { padding: 1px 8px; border-radius: 4px; background: var(--cream); color: var(--sun-ink); font-size: 11px; }
+.work-example__head { padding-bottom: 14px; border-bottom: 2px solid var(--teal-soft); }
+.work-example__head strong { display: block; font-size: 18px; }
+.work-example__head > span { font-size: 12px; color: var(--ink-mute); }
+.work-example table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 12px; margin-top: 10px; }
+.work-example th, .work-example td { text-align: left; padding: 10px 4px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; vertical-align: middle; }
+.work-example thead th { color: var(--ink-mute); font-weight: 500; }
+.work-example tbody th { font-weight: 700; }
+.work-example__tag { display: inline-block; padding: 3px 7px; border-radius: 5px; background: var(--teal-softer); color: var(--teal-deep); line-height: 1.6; }
+.work-example__note { font-size: 11px; line-height: 1.8; color: var(--ink-mute); margin-top: 14px; }
+.work-next { padding: 24px 28px; border-left: 3px solid var(--teal); background: var(--teal-softer); border-radius: 0 12px 12px 0; margin-bottom: 34px; }
+.work-next h3 { font-family: var(--serif); font-size: 21px; line-height: 1.6; margin-bottom: 10px; }
+.work-next p { font-size: 14px; color: var(--ink-soft); }
+.work-cta > p { margin-bottom: 16px; color: var(--ink-soft); font-size: 14px; }
+.work-cta .work-cta__note { font-size: 12px; color: var(--ink-mute); margin-top: 12px; }
+@media (max-width: 720px) {
+  .work-overview { grid-template-columns: 1fr; gap: 24px; }
+  .work-next { padding: 20px; }
+}
+@media (max-width: 400px) {
+  .work-example { padding: 16px 12px; }
+  .work-example th, .work-example td { padding: 9px 3px; }
+  .work-example__tag { padding: 3px 4px; }
+  .work-cta .btn { padding: 14px 18px; font-size: 13px; }
+}
+
 /* ---------- 02 実績：横スクロールレール ---------- */
 .sec-works {
   position: relative;

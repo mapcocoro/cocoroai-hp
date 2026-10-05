@@ -4,13 +4,13 @@
   const CONTACT_URL = 'https://cocoroai-contact.super-night-76d8.workers.dev';
   const SOLUTIONS_URL = '/solutions.html';
   const API_URL = 'https://cocoro-chat-api.super-night-76d8.workers.dev';
-  const INITIAL_MESSAGE = 'こんにちは！ココロAI合同会社のアシスタント、ココロボちゃんです🤖\n\nホームページ・LINE・アプリなど、Web周りのことで気になることがあれば、どうぞお気軽にご相談ください。\n\nまず、何からご覧になりますか？';
+  const INITIAL_MESSAGE = 'こんにちは！ココロＡＩ合同会社のアシスタント、ココロボちゃんです🤖\n\nホームページ・業務ツール・LINE・アプリなど、Web周りのことで気になることがあれば、どうぞお気軽にご相談ください。\n\nまず、何からご覧になりますか？';
 
   // クイックリプライ選択肢
   const QUICK_REPLIES = [
     { label: '🌐 ホームページを作りたい',         type: 'send', value: 'ホームページを作りたいです',                         reply: 'ホームページですね！🌐\nどのようなお仕事をされていますか？目的やイメージがあればぜひ教えてください。' },
+    { label: '⚙️ 業務ツール・アプリを相談したい', type: 'send', value: '業務ツールやアプリについて相談したいです',             reply: '業務改善ですね！⚙️\nどんな作業を効率化したいかを教えていただけると、ぴったりの提案ができますよ。' },
     { label: '💬 LINE・ミニアプリを相談したい',   type: 'send', value: 'LINE公式アカウントやミニアプリについて相談したいです', reply: 'LINEですね！💬\n集客・予約・お知らせ配信など、色々な使い方ができますよ。今どんなお困りごとがありますか？' },
-    { label: '⚙️ アプリ・業務ツールを相談したい', type: 'send', value: 'アプリや業務ツールについて相談したいです',             reply: '業務改善ですね！⚙️\nどんな作業を効率化したいかを教えていただけると、ぴったりの提案ができますよ。' },
     { label: '📋 お悩み別ページを見る',            type: 'link', value: SOLUTIONS_URL },
     { label: '📩 まずは無料相談したい',             type: 'link', value: CONTACT_URL },
   ];
@@ -305,7 +305,7 @@
       <div class="cocoro-avatar"><img src="/images/cocorobot.png" alt="ココロボちゃん" style="width:64px;height:64px;object-fit:contain;"></div>
       <div class="cocoro-info">
         <div class="cocoro-name">ココロボちゃん</div>
-        <div class="cocoro-status">ココロAI合同会社のアシスタント</div>
+        <div class="cocoro-status">ココロＡＩ合同会社のアシスタント</div>
       </div>
       <button id="cocoro-chat-close" aria-label="閉じる">✕</button>
     </div>

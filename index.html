@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Mono:wght@400;500&family=Shippori+Mincho+B1:wght@600;800&family=Yomogi&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260702d">
+<link rel="stylesheet" href="style.css?v=20261005a">
 </head>
 <body>
 
@@ -130,22 +130,22 @@
       <img class="svc-card__icon" src="images/icon-website.png" alt="" width="120" height="120">
       <span class="svc-card__more" aria-hidden="true">くわしく →</span>
     </article>
-    <article class="svc-card svc-card--cream" data-panel="line" role="button" tabindex="0">
+    <article class="svc-card" data-panel="app" role="button" tabindex="0">
       <span class="svc-card__num">02</span>
+      <div class="svc-card__body">
+        <h3>業務ツール・<br class="sp">アプリ開発</h3>
+        <p>紙・Excelの管理や、仕事に合わなかったシステムを見直したい方へ。必要な機能に絞った、自社専用の使いやすいツールを作ります。</p>
+      </div>
+      <img class="svc-card__icon" src="images/icon-document.png" alt="" width="120" height="120">
+      <span class="svc-card__more" aria-hidden="true">くわしく →</span>
+    </article>
+    <article class="svc-card svc-card--cream" data-panel="line" role="button" tabindex="0">
+      <span class="svc-card__num">03</span>
       <div class="svc-card__body">
         <h3>LINE公式・<br class="sp">ミニアプリ</h3>
         <p>お客さまとの距離がいちばん近い場所に、予約・順番待ち・会員証。お店の毎日が少し楽になります。</p>
       </div>
       <img class="svc-card__icon" src="images/icon-smartphone.png" alt="" width="120" height="120">
-      <span class="svc-card__more" aria-hidden="true">くわしく →</span>
-    </article>
-    <article class="svc-card" data-panel="app" role="button" tabindex="0">
-      <span class="svc-card__num">03</span>
-      <div class="svc-card__body">
-        <h3>アプリ開発・<br class="sp">業務ツール</h3>
-        <p>見積・帳票・名簿・予定調整。「うちの仕事に合うものがない」を、ちょうどいいサイズで作ります。</p>
-      </div>
-      <img class="svc-card__icon" src="images/icon-document.png" alt="" width="120" height="120">
       <span class="svc-card__more" aria-hidden="true">くわしく →</span>
     </article>
     <article class="svc-card svc-card--cream" data-panel="ai" role="button" tabindex="0">
@@ -184,8 +184,8 @@
     </article>
     <article class="rail-card">
       <p class="rail-card__meta">講演・セミナー｜自治体</p>
-      <h3 class="rail-card__name">印西市<br>創業支援セミナー</h3>
-      <p class="rail-card__desc">市内で創業を目指す方向けのセミナーに登壇しました。</p>
+      <h3 class="rail-card__name">印西市<br>創業実践プログラム</h3>
+      <p class="rail-card__desc">創業実践プログラムのトークセッション＆交流会に登壇しました。</p>
       <span class="rail-card__tag">登壇</span>
     </article>
     <article class="rail-card">
@@ -392,11 +392,67 @@
     <div class="svc-panel__cta"><a class="btn btn--primary" href="https://cocoroai-contact.super-night-76d8.workers.dev" target="_blank" rel="noopener">無料で相談する →</a></div>
   </section>
 
+  <section class="svc-panel" data-panel-body="app" hidden>
+    <header class="svc-panel__head">
+      <img src="images/icon-document.png" alt="" class="svc-panel__icon">
+      <div><p class="sec-no">SERVICE 02</p><h2 class="svc-panel__title">業務ツール・アプリ開発</h2></div>
+    </header>
+    <div class="chat">
+      <p class="chat__user">紙とExcel、別々の管理が増えてきた…</p>
+      <p class="chat__user">導入したシステムが、仕事に合わなかった…</p>
+      <div class="chat__robo"><img src="images/cocorobot.png" alt=""><p class="font-hand">必要な機能から、いっしょに整理しよう！</p></div>
+    </div>
+    <div class="work-copy">
+      <h3 class="work-copy__title">自社に必要な機能だけ。<br>毎日の仕事に合う、使いやすい業務ツール。</h3>
+      <p>紙やExcelへの転記に時間がかかる。導入したシステムが、現場の仕事に合わず定着しなかった。そんなお悩みを、普段の仕事の流れから一緒に整理します。</p>
+      <p>顧客情報・問い合わせ・予定・次の連絡など、必要な機能に絞って、御社の業務に合わせたツールを設計・開発します。</p>
+    </div>
+    <div class="work-overview">
+      <div class="work-benefits">
+        <h3 class="svc-panel__sub">仕事に合わせて、使いやすく。</h3>
+        <ul>
+          <li><strong>必要な情報を、ひとつに</strong><p>顧客情報や対応履歴などを、一か所で確認。</p></li>
+          <li><strong>迷わず使える画面に</strong><p>普段の仕事で使う項目や操作に絞って設計。</p></li>
+          <li><strong>次にすることが、見える</strong><p>予定や対応状況を、見やすくまとめます。</p></li>
+        </ul>
+      </div>
+      <figure class="work-example">
+        <figcaption>画面イメージ <span>架空データ</span></figcaption>
+        <div class="work-example__head"><strong>今日の確認</strong><span>情報をまとめて確認</span></div>
+        <table>
+          <thead><tr><th scope="col">お客様</th><th scope="col">内容</th><th scope="col">次の対応</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">お客様A</th><td>ご相談受付</td><td><span class="work-example__tag">内容を確認</span></td></tr>
+            <tr><th scope="row">お客様B</th><td>お打ち合わせ</td><td><span class="work-example__tag">日程を確認</span></td></tr>
+            <tr><th scope="row">お客様C</th><td>ご連絡待ち</td><td><span class="work-example__tag">ご連絡</span></td></tr>
+          </tbody>
+        </table>
+        <p class="work-example__note">紹介用の画面イメージです。実際の項目・画面は、御社の業務に合わせて設計します。</p>
+      </figure>
+    </div>
+    <div class="work-next">
+      <h3>まずは、一つの困りごとから。</h3>
+      <p>必要に応じて、別々に管理している情報をつなげていけます。<br class="pc">今必要なことと、これからの使い方を、一緒に考えます。</p>
+    </div>
+    <h3 class="svc-panel__sub">自社アプリ・小さな道具のサンプル</h3>
+    <div class="demo-grid">
+      <a class="demo-btn" href="https://cocoroai-tools.pages.dev" target="_blank" rel="noopener"><img src="images/icon-co-kodogu.png" alt=""><span><strong>しごとの小道具</strong><small>無料ツール10本</small></span></a>
+      <a class="demo-btn" href="https://apps.apple.com/jp/app/post-pal/id6749898580" target="_blank" rel="noopener"><img src="images/post_pal_icon.png" alt=""><span><strong>Post Pal</strong><small>iOS｜SNS投稿をAIで自動作成</small></span></a>
+      <a class="demo-btn" href="https://mapcocoro.github.io/genbacho-0d2a02/" target="_blank" rel="noopener"><img src="images/icon-genbacho.png" alt=""><span><strong>現場帳</strong><small>建設業向け見積デモ</small></span></a>
+      <a class="demo-btn" href="https://meishi.cocoroai.co.jp/" target="_blank" rel="noopener"><img src="images/meishi_icon.png" alt=""><span><strong>おてもと名刺帳</strong><small>AI-OCR名刺管理</small></span></a>
+    </div>
+    <div class="svc-panel__cta work-cta">
+      <p>「何を作ればよいか分からない」段階から、ご相談いただけます。</p>
+      <a class="btn btn--primary" href="https://cocoroai-contact.super-night-76d8.workers.dev" target="_blank" rel="noopener">業務ツールについて相談する →</a>
+      <p class="work-cta__note">今の管理方法と、困っていることを教えてください。</p>
+    </div>
+  </section>
+
   <section class="svc-panel" data-panel-body="line" hidden>
     <header class="svc-panel__head">
       <img src="images/icon-smartphone.png" alt="" class="svc-panel__icon">
       <div>
-        <p class="sec-no">SERVICE 02</p>
+        <p class="sec-no">SERVICE 03</p>
         <h2 class="svc-panel__title">LINE公式・ミニアプリ</h2>
       </div>
     </header>
@@ -426,30 +482,6 @@
     <div class="svc-panel__cta"><a class="btn btn--primary" href="https://cocoroai-contact.super-night-76d8.workers.dev" target="_blank" rel="noopener">無料で相談する →</a></div>
   </section>
 
-  <section class="svc-panel" data-panel-body="app" hidden>
-    <header class="svc-panel__head">
-      <img src="images/icon-document.png" alt="" class="svc-panel__icon">
-      <div>
-        <p class="sec-no">SERVICE 03</p>
-        <h2 class="svc-panel__title">アプリ開発・業務ツール</h2>
-      </div>
-    </header>
-    <div class="chat">
-      <p class="chat__user">見積書づくりに時間がかかる…</p>
-      <p class="chat__user">うちの仕事に合うツールが見つからない…</p>
-      <div class="chat__robo"><img src="images/cocorobot.png" alt=""><p class="font-hand">「ちょうどいいサイズ」で、つくれるよ！</p></div>
-    </div>
-    <p class="svc-panel__desc">見積・帳票・名簿・予定調整・順番待ち。市販ツールが大きすぎる・高すぎると感じたら、御社の仕事に合わせたちょうどいい道具をオーダーメイドで作ります。</p>
-    <h3 class="svc-panel__sub">さわれるサンプル</h3>
-    <div class="demo-grid">
-      <a class="demo-btn" href="https://cocoroai-tools.pages.dev" target="_blank" rel="noopener"><img src="images/icon-co-kodogu.png" alt=""><span><strong>しごとの小道具</strong><small>無料ツール10本</small></span></a>
-      <a class="demo-btn" href="https://apps.apple.com/jp/app/post-pal/id6749898580" target="_blank" rel="noopener"><img src="images/post_pal_icon.png" alt=""><span><strong>Post Pal</strong><small>iOS｜SNS投稿をAIで自動作成</small></span></a>
-      <a class="demo-btn" href="https://mapcocoro.github.io/genbacho-0d2a02/" target="_blank" rel="noopener"><img src="images/icon-genbacho.png" alt=""><span><strong>現場帳</strong><small>建設業向け見積デモ</small></span></a>
-      <a class="demo-btn" href="https://meishi.cocoroai.co.jp/" target="_blank" rel="noopener"><img src="images/meishi_icon.png" alt=""><span><strong>おてもと名刺帳</strong><small>AI-OCR名刺管理</small></span></a>
-    </div>
-    <div class="svc-panel__cta"><a class="btn btn--primary" href="https://cocoroai-contact.super-night-76d8.workers.dev" target="_blank" rel="noopener">無料で相談する →</a></div>
-  </section>
-
   <section class="svc-panel" data-panel-body="ai" hidden>
     <header class="svc-panel__head">
       <img src="images/icon-network.png" alt="" class="svc-panel__icon">
@@ -465,7 +497,7 @@
     </div>
     <p class="svc-panel__desc">自治体・商工会議所・企業さま向けに、実演中心のAI研修・講演を行っています。専門用語を使わず、受講者がその日から使える状態になることをゴールにしています。</p>
     <h3 class="svc-panel__sub">実績・著書</h3>
-    <p class="svc-panel__note">印西市 創業支援セミナー 登壇／Kindle著書3冊（はじめてのAI・AIは魔法の杖・Web制作バイブル）</p>
+    <p class="svc-panel__note">印西市 創業実践プログラム・トークセッション 登壇／Kindle著書3冊（はじめてのAI・AIは魔法の杖・Web制作バイブル）</p>
     <div class="svc-panel__books">
       <a href="https://www.amazon.co.jp/dp/B0GHZVBNKR/" target="_blank" rel="noopener"><img src="images/book1.jpg" alt="著書1"></a>
       <a href="https://www.amazon.co.jp/dp/B0GJ5S7CC1/" target="_blank" rel="noopener"><img src="images/book2.jpg" alt="著書2"></a>
@@ -518,6 +550,6 @@
 <script src="fluid.js?v=20260612k"></script>
 <script src="main.js?v=20260612j"></script>
 <script src="panels.js?v=20260612j"></script>
-<script src="chat-widget.js"></script>
+<script src="chat-widget.js?v=20261005a"></script>
 </body>
 </html>
