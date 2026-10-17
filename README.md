@@ -1,6 +1,6 @@
 # ココロAI 自社HP
 
-https://www.cocoroai.co.jp
+https://cocoroai.co.jp
 
 ## 構成
 
@@ -8,7 +8,7 @@ https://www.cocoroai.co.jp
 |------|------|
 | ホスティング | GitHub Pages（main ブランチ直接配信） |
 | リポジトリ | `mapcocoro/cocoroai-hp` |
-| ドメイン | www.cocoroai.co.jp（CNAME） |
+| ドメイン | cocoroai.co.jp（CNAME） |
 | 技術 | HTML / CSS / Vanilla JS |
 | チャットウィジェット | Cloudflare Workers（gemini-2.5-pro） |
 
