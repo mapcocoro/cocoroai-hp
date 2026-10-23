@@ -155,7 +155,7 @@
 
   // --- マグネットボタン ---
   if (FINE && !REDUCED2) {
-    document.querySelectorAll(".btn--primary, .btn--light, .header-cta").forEach(function (btn) {
+    document.querySelectorAll(".btn--primary, .btn--light, .btn--sun, .header-cta").forEach(function (btn) {
       btn.addEventListener("pointermove", function (e) {
         var r = btn.getBoundingClientRect();
         var dx = e.clientX - (r.left + r.width / 2);
@@ -177,5 +177,62 @@
       }, { passive: true });
       card.addEventListener("pointerleave", function () { card.style.transform = ""; });
     });
+  }
+
+  // --- お知らせの新着表示（公開から30日はNEW） ---
+  var NEW_DAYS = 30;
+  var newsTimes = document.querySelectorAll(".news-list time");
+  if (newsTimes.length) {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var isNew = function (t) {
+      var m = (t.getAttribute("datetime") || t.textContent).match(/(\d{4})\D(\d{1,2})\D(\d{1,2})/);
+      if (!m) return false;
+      var days = (today - new Date(+m[1], m[2] - 1, +m[3])) / 864e5;
+      return days >= 0 && days < NEW_DAYS;
+    };
+    var anyNew = false;
+    newsTimes.forEach(function (t) {
+      if (!isNew(t)) return;
+      anyNew = true;
+      var b = document.createElement("span");
+      b.className = "news-new";
+      b.textContent = "NEW";
+      t.insertAdjacentElement("afterend", b);
+    });
+
+    // ヒーローの1行を、お知らせ欄の先頭と同じ内容にそろえる
+    var hero = document.getElementById("heroNews");
+    var first = document.querySelector("#news .news-list li");
+    if (hero && first) {
+      var fa = first.querySelector("a");
+      var ft = first.querySelector("time");
+      var ht = hero.querySelector("time");
+      hero.href = fa ? fa.getAttribute("href") : "news.html";
+      if (fa && fa.target) { hero.target = fa.target; hero.rel = fa.rel; }
+      else { hero.removeAttribute("target"); hero.removeAttribute("rel"); }
+      if (ft && ht) {
+        if (ft.getAttribute("datetime")) ht.setAttribute("datetime", ft.getAttribute("datetime"));
+        else ht.removeAttribute("datetime");
+        ht.textContent = ft.textContent;
+      }
+      hero.querySelector(".hero-news__text").textContent = first.querySelector("p").textContent;
+      if (ft && isNew(ft)) {
+        hero.classList.add("is-new");
+        hero.querySelector(".hero-news__label").textContent = "NEW";
+      }
+    }
+
+    if (anyNew) {
+      document.querySelectorAll('.gnav a[href$="#news"], .gnav a[href$="news.html"]').forEach(function (a) {
+        a.classList.add("has-new");
+      });
+      document.querySelectorAll('.drawer a[href$="#news"], .drawer a[href$="news.html"]').forEach(function (a) {
+        var b = document.createElement("span");
+        b.className = "news-new news-new--drawer";
+        b.textContent = "NEW";
+        a.appendChild(b);
+      });
+    }
   }
 })();
